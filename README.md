@@ -1,0 +1,2 @@
+# uniapp_vue3_ts_uvewplus_pinia_template
+使用vscode创建UniApp+Vue3+TypeScript+uViewPlus+Pinia的模块
