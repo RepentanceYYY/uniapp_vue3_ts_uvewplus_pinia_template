@@ -1,25 +1,98 @@
 {
   "pages": [
-    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
-      "path": "pages/index/index",
+      "path": "pages/home/HomePage",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/query/QueryPage",
+      "style": {
+        "navigationBarTitleText": "查询"
+      }
+    },
+    {
+      "path": "pages/apply/ApplyPage",
+      "style": {
+        "navigationBarTitleText": "申请"
+      }
+    },
+    {
+      "path": "pages/approval/ApprovalPage",
+      "style": {
+        "navigationBarTitleText": "审批"
+      }
+    },
+    {
+      "path": "pages/record/RecordPage",
+      "style": {
+        "navigationBarTitleText": "记录"
       }
     }
   ],
+
+  "subPackages": [
+    {
+      "root": "subpackage1",
+      "pages": [
+        { "path": "otherPage1/OtherPage1", "style": { "navigationBarTitleText": "其他1" } },
+        { "path": "otherPage2/OtherPage2", "style": { "navigationBarTitleText": "其他2" } }
+      ]
+    }
+  ],
+
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
+
   "easycom": {
-    // 注意一定要放在custom里，否则无效，https://ask.dcloud.net.cn/question/131175
     "custom": {
       "^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
       "^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
       "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue"
     }
+  },
+
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#007AFF",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/HomePage",
+        "text": "首页",
+        "iconPath": "static/icons/home.png",
+        "selectedIconPath": "static/icons/home.png"
+      },
+      {
+        "pagePath": "pages/query/QueryPage",
+        "text": "查询",
+        "iconPath": "static/icons/search.png",
+        "selectedIconPath": "static/icons/search.png"
+      },
+      {
+        "pagePath": "pages/apply/ApplyPage",
+        "text": "申请",
+        "iconPath": "static/icons/add.png",
+        "selectedIconPath": "static/icons/add.png"
+      },
+      {
+        "pagePath": "pages/approval/ApprovalPage",
+        "text": "审批",
+        "iconPath": "static/icons/tasks.png",
+        "selectedIconPath": "static/icons/tasks.png"
+      },
+      {
+        "pagePath": "pages/record/RecordPage",
+        "text": "记录",
+        "iconPath": "static/icons/history.png",
+        "selectedIconPath": "static/icons/history.png"
+      }
+    ]
   }
 }

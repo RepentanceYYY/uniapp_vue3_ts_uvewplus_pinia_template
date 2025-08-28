@@ -1,5 +1,6 @@
 <style lang="scss">
 	@import "uview-plus/index.scss";
+  @import "./static/css/header.scss";
 </style>
 <script setup lang="ts">
 import { onLaunch, onShow, onHide } from "@dcloudio/uni-app";

@@ -1,0 +1,92 @@
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50; /* var(--dark) */
+}
+
+.card-more {
+  color: #3498db; /* var(--primary) */
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cabinet-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.cabinet-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.cabinet-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #2c3e50; /* var(--dark) */
+}
+
+.cabinet-icon {
+  font-size: 24px;
+  color: #3498db; /* var(--primary) */
+  margin-bottom: 8px;
+}
+
+.cabinet-info {
+  font-size: 12px;
+  color: #7f8c8d; /* var(--gray) */
+}
+/* 动画效果 */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.fade-in { animation: fadeIn 0.3s ease; }
+.slide-in { animation: slideIn 0.3s ease; }
+
+/* 响应式设计 */
+@media (max-width: 400px) {
+    .cabinet-list { grid-template-columns: 1fr; }
+    .stats-container { grid-template-columns: 1fr; }
+    .content { padding: 15px; }
+    .u-card { padding: 15px; }
+}

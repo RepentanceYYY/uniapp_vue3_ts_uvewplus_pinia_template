@@ -8,11 +8,14 @@
       "@/*": ["./src/*"]
     },
     "lib": ["esnext", "dom"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "types": [
       "@dcloudio/types",
       "miniprogram-api-typings",
       "@uni-helper/uni-app-types",
-      "@uni-helper/uni-ui-types"
+      "@uni-helper/uni-ui-types",
+      "pinia"
     ]
   },
   "vueCompilerOptions": {
